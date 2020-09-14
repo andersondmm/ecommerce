@@ -1,0 +1,15 @@
+form{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color:white;
+}
+body{
+    background-image:url(https://i.pinimg.com/736x/85/30/a5/8530a53676858a6dc39a07abaf330ed0.jpg) ;
+    background-blend-mode:overlay;
+    background-color: rgba(0,0,0,0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
