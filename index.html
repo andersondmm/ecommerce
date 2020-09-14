@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                                               
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                     
+    <title>Market Online Second Parcial </title>
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./carousel.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+ -->
+ <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<body onload="render()">
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success text-white">
+            <a class="text-white navbar-brand" href="#">
+                <i class="fab fa-pagelines"></i>                
+                Market Online
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto menu">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>                   
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#fruit">Frutas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#juice">Bebidas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#conserva">Conservas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#bebidaCaliente">Bebidas Calientes</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#lacteo">Lácteos</a>
+                    </li>
+                </ul>    
+                <form class="form-inline mt-2 mt-md-0">                                      
+                    <a class="text-white nav-link" href="cart.html">
+                        <i class="text-warning fas fa-shopping-cart"></i>
+                        Comprar
+                        <i style="color:yellow;" id="cart_n"></i>
+                    </a>
+                    <a class="nav-link text-white" href="./admin/login.html">
+                    <i class="far fa-user"></i>
+                    Administrador
+                    </a>   
+                </form>               
+            </div>     
+        </nav>                  
+        <main role="main">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li style="z-index:102;" data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                    <li style="z-index:102;" data-target="#myCarousel" data-slide-to="1" class="active" ></li>
+                    <li style="z-index:102;" data-target="#myCarousel" data-slide-to="2" class="active" ></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="imgFilter firts-slide" src="./img/carrusel/Amazon_Go_Grocery_3.jpg" alt="First Slide">
+                        <div class="container">
+                
+                            <div class="carousel-caption">
+                                <h1> Market Online</h1>
+                               <!--  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae veritatis rerum dicta, 
+                                    similique totam consectetur quae! Aliquid harum consequatur facilis accusantium aut dolorum nulla, 
+                                    perspiciatis beatae, sit est voluptatibus suscipit?</p> -->
+                               <p> <a role="button" class="btn btn-lg btn-primary" href="#"> Products</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item ">
+                        <img class="imgFilter second-slide" src="./img/carrusel/istockphoto-1172975655-170667a.jpg" alt="Second Slide">
+                        <div class="container">
+
+                            <div class="carousel-caption text-left">
+                                <h1> Market Online</h1>
+                                <p>El equipo Market Online te da la bienvenida, Supermercados Electrónicos del Ecuador S.A., 
+                                    nace gracias al firme compromiso de sus socios en brindar productos y servicios de calidad 
+                                    a sus clientes.</p>
+                               <p> <a role="button" class="btn btn-lg btn-primary" href="#"> Products</a></p>
+                            </div>
+                        </div>                   
+                    </div>                  
+
+                    <div class="carousel-item ">
+                        <img class="imgFilter third-slide" src="./img/carrusel/vegetables-in-supermarket-stock-picture-3117299.jpg" alt="Third Slide">
+                        <div class="container">
+
+                            <div class="carousel-caption text-right">
+                                <h1> Market Online</h1>
+                                <p>En Market Online nos encargamos de enlazar a grandes y pequeñas empresas con el consumidor final, 
+                                    llevando los mejores productos con la más alta calidad hasta 
+                                    la mesa de cada cliente; manteniendo siempre la temperatura adecuada de los productos.</p>
+                               <p> <a role="button" class="btn btn-lg btn-primary" href="#"> Products</a></p>
+                            </div>
+                        </div>          
+                    </div>                           
+                </div>
+                <a style="z-index:101;" class="carousel-control-prev" href="#myCarousel" 
+                role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previus</span>
+                </a>
+
+                <a style="z-index:101;" class="carousel-control-next" href="#myCarousel" 
+                role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>                         
+
+            <div class="container marketing">
+                <br>                     
+                <h2 id="fruit">Frutas</h2>
+                <hr>
+                <div class="row" id="fruitDIV"></div>
+                <h2 id="juice">Bebidas</h2>
+                <hr>
+                <div class="row" id="juiceDIV"></div>
+                <h2 id="conserva">Conservas</h2>
+                <hr>
+                <div class="row" id="ConservaDIV"></div>
+                <h2 id="bebidaCaliente">Bebidas Calientes</h2>
+                <hr>
+                <div class="row" id="bebidaCalienteDIV"></div>
+                <h2 id="lacteo">Lácteos</h2>
+                <hr>
+                <div class="row" id="lacteoDIV"></div>
+                <hr class="featurette-divider">
+                
+            </div>            
+            
+            <footer class="container">
+                <p class="float-right">                 
+                    <a href="#">
+                        PARTE SUPERIOR</a>
+                </p>          
+                <div class="row1">              
+                    ATENDIMIENTO:                                         
+                </div>
+                <div class="row3">              
+                    CONTACTO: (21) 99451-3510                               
+                </div>
+                <div class="row3">              
+                   E-MAIL: marketOnline@gmail.com                              
+                </div>
+                <div class="row3">              
+                     HORARIO: Lunes 07:00 A.M.  | 20:00 P.M. ---- Sábado 07:00 A.M.  | 16:00 P.M.                              
+                </div>
+                <div class="row2">              
+                   <a href="https://www.facebook.com/"> <img src="./img/redesImg/facebook.png" alt=""></a>                           
+                </div>
+                <div class="row2">              
+                    <a href="https://www.instagram.com/accounts/login/?hl=es-la"><img src="./img/redesImg/instagram-bosquejado.png" alt=""></a>                                
+                </div>
+                <div class="row2">              
+                    <a href="https://twitter.com/login?lang=es"><img src="./img/redesImg/twitter.png" alt=""></a>                         
+                </div>
+                <div class="row2">              
+                    <a href="https://www.youtube.com/?hl=es"><img src="./img/redesImg/video.png" alt=""></a>                         
+                </div>
+
+            </footer>              
+        </main>         
+    </header>
+
+    
+
+         
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+<!--     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.all.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="./admin/insertProduct.js"></script>
+   
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+
+</body>
+</html>
+
+
+         
