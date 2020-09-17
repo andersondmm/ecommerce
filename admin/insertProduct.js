@@ -66,11 +66,7 @@ function readInsertProduct(){
             '${orderValue.precio}')"><i class="fas fa-trash-alt"> </i> Eliminar Producto</button>
             
            
-           <button type="button" style="color:Black" 
-           onclick="cart2(${orderValue.id}, '${orderValue.producto}',
-           '${orderValue.precio}')" class="btn btn-success"> 
-           <a href="../cart.html" style="color:inherit;"> Comprar </a> </button>
-
+           
               
               
            </div>
